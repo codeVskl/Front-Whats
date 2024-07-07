@@ -1,0 +1,228 @@
+:root {
+    --cor-primaria: #111b21;
+    --cor-secundaria: #202c33;
+    --cor-texto-primario: #e9edef;
+    --cor-texto-secundario: #6f93a0;
+    --cor-hover: #2a3942;
+    --cor-icons:#aebac1;
+    --car-fundo-msg: #005c4b;
+}
+
+.menu-lateral {
+    position: fixed;
+    width: 40%;
+    height: 100vh;
+    border-right: 2px solid var(--cor-secundaria);
+    background-color: var(--cor-primaria);
+}
+
+.menu-lateral .cabecalho {
+    display: flex;
+    padding: 15px 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-secundaria);
+}
+
+.menu-lateral .pesq-contatos {
+    padding: 8px 10px;
+    margin: 15px;
+    border-radius: 15px;
+    background-color: var(--cor-secundaria);
+}
+
+
+.menu-lateral .pesq-contatos > i {
+    font-size: 22px;
+    color: var(--cor-icons);
+}
+
+.menu-lateral .botoes {
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--cor-secundaria);
+}
+
+.menu-lateral .lista-contatos {
+    overflow-y: auto;
+    max-height: 705px;
+}
+
+.menu-lateral .lista-contatos .contato {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    transition: 0.1s;
+}
+
+.menu-lateral .lista-contatos .contato:hover {
+    background-color: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+.menu-lateral .lista-contatos .contato .informacoes{
+    padding: 28px 12px;
+    margin-left: 12px;
+    flex: 1;
+    border-top: 1px solid var(--cor-secundaria);
+}
+
+.menu-lateral .lista-contatos .contato .informacoes span:last-child, p {
+    color: var(--cor-texto-secundario);
+}
+
+.menu-lateral .lista-contatos .contato:first-child .informacoes {
+    border-top: none;
+}
+
+.menu-lateral .lista-contatos .contato .informacoes > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-lateral .lista-contatos .contato .informacoes > div > span {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.principal .chat {
+    display: none;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    width: 60%;
+    background-image: url(../images/fundo.png);
+}
+
+.principal .chat:first-child {
+    background-image: url(../images/tela-inicial.png);
+}
+
+.principal .mostrar {
+    display: flex;
+    opacity: 1;
+}
+
+.principal .chat .cabecalho-chat {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--cor-secundaria);
+}
+
+.principal .chat .cabecalho-chat .info-chat {
+    flex: 1;
+    margin-left: 22px;
+}
+
+.principal .chat .cabecalho-chat .info-chat span:last-child {
+    color: var(--cor-texto-secundario);
+}
+
+.principal .chat .cabecalho-chat .info-chat span:first-child {
+    font-size: 28px;
+    line-height: 45px;
+}
+
+.principal .chat .campo-mensagens {
+    display: flex;
+    overflow-y: auto;
+    padding: 25px 50px;
+    flex: 1;
+    align-items: end;
+    flex-direction: column-reverse;
+}
+
+.principal .chat .campo-mensagens p {
+    max-width: 75%;
+    padding: 16px 12px;
+    margin: 2px 0;
+    border-radius: 10px;
+    background-color: var(--car-fundo-msg);
+    color: var(--cor-texto-primario);
+}
+
+
+.principal .chat .barra-envio {
+    display: flex;
+    align-items: center;
+    padding: 15px 22px;
+    background-color: var(--cor-secundaria);
+}
+
+.principal .chat .barra-envio .input {
+    padding: 35px 20px;
+    background-color: var(--cor-hover);
+    color: var(--cor-texto-primario);
+    border-radius: 20px;
+}
+
+.conversa-selecionada {
+    background-color: var(--cor-hover);
+}
+
+.image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+}
+
+.image-perfil {
+    width: 78px;
+    height: 78px;
+    border-radius: 50px;
+}
+
+.icon {
+    padding: 4px 22px;
+    font-size: 35px;
+    color: var(--cor-icons);
+}
+
+.emoji {
+    color: #ffff00;
+}
+
+.vermelho {
+    color: red;
+}
+
+.cyan {
+    color: cyan;
+}
+
+.btn {
+    margin-left: 15px;
+    border-radius: 30px;
+    font-size: 22px;
+    padding: 12px 15px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-secundario);
+    transition: ease-in 0.2s;
+}
+
+.btn:hover {
+    background-color: #0a332c;
+    cursor: pointer;
+}
+
+.input {
+    font-size: 25px;
+    padding-left: 22px;
+    height: 40px;
+    width: 90%;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-secundario);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--cor-primaria);
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--cor-hover);
+}

@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "roboto", sans-serif;
+    color: #e9edef;
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button, input {
+    border: none;
+    outline: none;
+}

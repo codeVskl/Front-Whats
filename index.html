@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp</title>
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/font awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <aside class="menu-lateral">
+        <header class="cabecalho">
+            <img class="image-perfil" src="src/images/semFoto.png" alt="foto de perfil">
+
+            <nav>
+                <a href="#"><i class="icon fas fa-users"></i></a>
+                <a href="#"><i class="icon fas fa-circle-notch"></i></a>
+                <a href="#"><i class="icon fas fa-comment-dots"></i></a>
+                <a href="#"><i class="icon fas fa-plus-square"></i></a>
+                <a href="#"><i class="icon fas fa-ellipsis-v"></i></a>
+            </nav>
+        </header>
+        <div class="pesq-contatos">
+            <i class="fas fa-search"></i>
+            <input placeholder="Pesquisar" class="input" type="text">
+        </div>
+        <div class="botoes">
+            <button class="btn">Tudo</button>
+            <button class="btn">Não lidas</button>
+            <button class="btn">Grupos</button>
+        </div>
+        <div class="lista-contatos">
+            <div class="contato conversa-selecionada"></div>
+            <div class="contato">
+                <img class="image" src="src/images/semFoto.png" alt="foto de perfil do contato">
+                <div class="informacoes">
+                    <div>
+                        <span class="nome-contato">Amor da minha vidinha <i class="vermelho fas fa-heart"></i></span>
+                        <span>19:39</span>
+                    </div>
+                    <p class="ultima-mensagem">vou ir te pegarrrr amorrr</p>
+                </div>
+            </div>
+            <div class="contato">
+                <img class="image" src="src/images/semFoto.png" alt="foto de perfil do contato">
+                <div class="informacoes">
+                    <div>
+                        <span class="nome-contato">Meu numero: (você)</span>
+                        <span>13:57</span>
+                    </div>
+                    <p class="ultima-mensagem">Panquequinha dmais - 3 xicaras de farinha - 1...</p>
+                </div>
+            </div>
+            <div class="contato">
+                <img class="image" src="src/images/semFoto.png" alt="foto de perfil do contato">
+                <div class="informacoes">
+                    <div>
+                        <span class="nome-contato">+55 85 9993- 1999</span>
+                        <span>12:10</span>
+                    </div>
+                    <p class="ultima-mensagem"><i class="fas fa-camera"></i> Foto</p>
+                </div>
+            </div>
+            <div class="contato">
+                <img class="image" src="src/images/semFoto.png" alt="foto de perfil do contato">
+                <div class="informacoes">
+                    <div>
+                        <span class="nome-contato">mariana</span>
+                        <span>Ontem</span>
+                    </div>
+                    <p class="ultima-mensagem">tu tá aonde judas perdeu as bota</p>
+                </div>
+            </div>
+            <div class="contato">
+                <img class="image" src="src/images/semFoto.png" alt="foto de perfil do contato">
+                <div class="informacoes">
+                    <div>
+                        <span class="nome-contato">mãe</span>
+                        <span>Ontem</span>
+                    </div>
+                    <p class="ultima-mensagem">Reagiu com <i class="vermelho fas fa-heart"></i> a: "acho q não aumenta muito n..."</p>
+                </div>
+            </div>
+            <div class="contato">
+                <img class="image" src="src/images/semFoto.png" alt="foto de perfil do contato">
+                <div class="informacoes">
+                    <div>
+                        <span class="nome-contato">+55 85 9994- 8999</span>
+                        <span>terça-feira</span>
+                    </div>
+                    <p class="ultima-mensagem">Você reagiu com <i class="emoji fas fa-sad-tear"></i> a: "Tenho que resolver ela, ..."</p>
+                    </p>
+                </div>
+            </div>
+            <div class="contato">
+                <img class="image" src="src/images/semFoto.png" alt="foto de perfil do contato">
+                <div class="informacoes">
+                    <div>
+                        <span class="nome-contato">Dev's</span>
+                        <span>26/06/2024</span>
+                    </div>
+                    <p class="ultima-mensagem">~Gabriel <i class="cyan fas fa-gem"></i> : <i class="far fa-sticky-note"></i> figurinha</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main class="principal">
+        <div class="chat mostrar">
+        </div>
+        <div class="chat">
+            <header class="cabecalho-chat">
+                <img class="image-perfil" src="src/images/semFoto.png" alt="Foto de perfil do contato aberto">
+                <div class="info-chat">
+                    <span>Amor da minha vidinha <i class="vermelho fas fa-heart"></i></span> <br>
+                    <span>Visto por último hoje às 19:12</span>
+                </div>
+                <a href="#"><i class="icon fas fa-search"></i></a>
+                <a href="#"><i class="icon fas fa-ellipsis-v"></i></a>
+            </header>
+            <div id="mensagens" class="campo-mensagens">
+                <p>vou ir te pegar amorrr</p>
+            </div>
+            <div class="barra-envio">
+                <a href="#"><i class="icon fas fa-grin"></i></a>
+                <a href="#"><i class="icon fas fa-plus"></i></a>
+                <input name="input" class="input" placeholder="Digite uma mensagem" type="text">
+                <a onclick="adicionarComentario(0)" ><i class="icon fas fa-microphone"></i></a>
+            </div>
+        </div>
+        <div class="chat">
+            <header class="cabecalho-chat">
+                <img class="image-perfil" src="src/images/semFoto.png" alt="Foto de perfil do contato aberto">
+                <div class="info-chat">
+                    <span>Meu numero: (você)</span> <br>
+                    <span>Visto por último hoje às 13:57</span>
+                </div>
+                <a href="#"><i class="icon fas fa-search"></i></a>
+                <a href="#"><i class="icon fas fa-ellipsis-v"></i></a>
+            </header>
+            <div id="mensagens" class="campo-mensagens">
+                <p>Panquequinha dmais - 3 xicaras de farinha - 1...</p>
+            </div>
+            <div class="barra-envio">
+                <a href="#"><i class="icon fas fa-grin"></i></a>
+                <a href="#"><i class="icon fas fa-plus"></i></a>
+                <input name="input" class="input" placeholder="Digite uma mensagem" type="text">
+                <a onclick="adicionarComentario(1)" ><i class="icon fas fa-microphone"></i></a>
+            </div>
+        </div>
+        <div class="chat">
+            <header class="cabecalho-chat">
+                <img class="image-perfil" src="src/images/semFoto.png" alt="Foto de perfil do contato aberto">
+                <div class="info-chat">
+                    <span>+55 85 9993- 1999</span> <br>
+                    <span>Visto por último hoje: 12:10</span>
+                </div>
+                <a href="#"><i class="icon fas fa-search"></i></a>
+                <a href="#"><i class="icon fas fa-ellipsis-v"></i></a>
+            </header>
+            <div id="mensagens" class="campo-mensagens">
+                <p><i class="fas fa-camera"></i> Foto</p>
+            </div>
+            <div class="barra-envio">
+                <a href="#"><i class="icon fas fa-grin"></i></a>
+                <a href="#"><i class="icon fas fa-plus"></i></a>
+                <input name="input" class="input" placeholder="Digite uma mensagem" type="text">
+                <a onclick="adicionarComentario(2)" ><i class="icon fas fa-microphone"></i></a>
+            </div>
+        </div>
+        <div class="chat">
+            <header class="cabecalho-chat">
+                <img class="image-perfil" src="src/images/semFoto.png" alt="Foto de perfil do contato aberto">
+                <div class="info-chat">
+                    <span>Mariana</span> <br>
+                    <span>Visto por último Ontem</span>
+                </div>
+                <a href="#"><i class="icon fas fa-search"></i></a>
+                <a href="#"><i class="icon fas fa-ellipsis-v"></i></a>
+            </header>
+            <div id="mensagens" class="campo-mensagens">
+                <p>tu tá aonde judas perdeu as bota</p>
+            </div>
+            <div class="barra-envio">
+                <a href="#"><i class="icon fas fa-grin"></i></a>
+                <a href="#"><i class="icon fas fa-plus"></i></a>
+                <input name="input" class="input" placeholder="Digite uma mensagem" type="text">
+                <a onclick="adicionarComentario(3)" ><i class="icon fas fa-microphone"></i></a>
+            </div>
+        </div>
+        <div class="chat">
+            <header class="cabecalho-chat">
+                <img class="image-perfil" src="src/images/semFoto.png" alt="Foto de perfil do contato aberto">
+                <div class="info-chat">
+                    <span>Mãe</span> <br>
+                    <span>Visto por último Ontem</span>
+                </div>
+                <a href="#"><i class="icon fas fa-search"></i></a>
+                <a href="#"><i class="icon fas fa-ellipsis-v"></i></a>
+            </header>
+            <div id="mensagens" class="campo-mensagens">
+                <p>Reagiu com <i class="vermelho fas fa-heart"></i> a: "acho q não aumenta muito n..."</p>
+            </div>
+            <div class="barra-envio">
+                <a href="#"><i class="icon fas fa-grin"></i></a>
+                <a href="#"><i class="icon fas fa-plus"></i></a>
+                <input name="input" class="input" placeholder="Digite uma mensagem" type="text">
+                <a onclick="adicionarComentario(4)" ><i class="icon fas fa-microphone"></i></a>
+            </div>
+        </div>
+        <div class="chat">
+            <header class="cabecalho-chat">
+                <img class="image-perfil" src="src/images/semFoto.png" alt="Foto de perfil do contato aberto">
+                <div class="info-chat">
+                    <span>+55 85 9994- 8999</span> <br>
+                    <span>Visto por último terça-feira</span>
+                </div>
+                <a href="#"><i class="icon fas fa-search"></i></a>
+                <a href="#"><i class="icon fas fa-ellipsis-v"></i></a>
+            </header>
+            <div id="mensagens" class="campo-mensagens">
+                <p>Você reagiu com <i class="emoji fas fa-sad-tear"></i> a: "Tenho que resolver ela, ..."</p>
+            </div>
+            <div class="barra-envio">
+                <a href="#"><i class="icon fas fa-grin"></i></a>
+                <a href="#"><i class="icon fas fa-plus"></i></a>
+                <input name="input" class="input" placeholder="Digite uma mensagem" type="text">
+                <a onclick="adicionarComentario(5)" ><i class="icon fas fa-microphone"></i></a>
+            </div>
+        </div>
+        <div class="chat">
+            <header class="cabecalho-chat">
+                <img class="image-perfil" src="src/images/semFoto.png" alt="Foto de perfil do contato aberto">
+                <div class="info-chat">
+                    <span>Dev's</span> <br>
+                    <span></span>
+                </div>
+                <a href="#"><i class="icon fas fa-search"></i></a>
+                <a href="#"><i class="icon fas fa-ellipsis-v"></i></a>
+            </header>
+            <div id="mensagens" class="campo-mensagens">
+                <p>~Gabriel <i class="cyan fas fa-gem"></i> : <i class="far fa-sticky-note"></i> figurinha</p>
+            </div>
+            <div class="barra-envio">
+                <a href="#"><i class="icon fas fa-grin"></i></a>
+                <a href="#"><i class="icon fas fa-plus"></i></a>
+                <input name="input" class="input" placeholder="Digite uma mensagem" type="text">
+                <a onclick="adicionarComentario(6)" ><i class="icon fas fa-microphone"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
