@@ -29,11 +29,53 @@ function mostrarConveraDeFundo(indice) {
 }
 
 const inputs = document.getElementsByName("input")
+const iconMicrofone = document.querySelectorAll(".fa-microphone")
+const botaoEnviarMensagem = document.querySelectorAll(".submit")
 const campoMensagem = document.getElementsByClassName("campo-mensagens")
 
-function adicionarComentario(index) {
-    let textoDigitado = inputs[index].value;
-    let campoComMensagem = campoMensagem[index] 
+botaoEnviarMensagem.forEach((botao, indice) => {
+    document.addEventListener("keypress", function(e) {
+        if(e.key === "Enter") {
+            botao.click();
+        }
+    })
 
-    campoComMensagem.innerHTML += `<p>${textoDigitado}</p>`
+    botao.addEventListener("click", () => {
+        if(inputs[indice].value !== ''){
+            adicionarComentario(indice)
+            removerPaperPlane(indice)
+            inputs[indice].value = ''
+        }else{
+            return
+        }
+    })
+})
+
+
+function adicionarComentario(indice) {
+    let textoDigitado = inputs[indice].value;
+    let campoComMensagem = campoMensagem[indice] 
+    let horaTextoDigitado = "<span>13:30</span>"
+
+    campoComMensagem.innerHTML += `<p>${textoDigitado} ${horaTextoDigitado}</p>`
+}
+
+inputs.forEach((input, indice) => {
+    input.addEventListener('keyup', () => {
+        if(input.value === "") {
+            removerPaperPlane(indice)
+        }else {
+            adicionarPaperPlane(indice)
+        }
+    })
+})
+
+function adicionarPaperPlane(indice) {
+    iconMicrofone[indice].classList.remove("fa-microphone")
+    iconMicrofone[indice].classList.add("fa-paper-plane")
+}
+
+function removerPaperPlane(indice) {
+    iconMicrofone[indice].classList.remove("fa-paper-plane")
+    iconMicrofone[indice].classList.add("fa-microphone")
 }
